@@ -1,7 +1,7 @@
 # RSschool_english-for-kids
 This is task from RSschool (https://rs.school/js/)
 ## RSS Английский для детей
-#### my realisation ()
+#### my realisation (https://sad-minsky-808bda.netlify.app/)
 <img src="./src/assets/img/image.JPG" width=100% height=40%>
 
 #### Структура приложения:
