@@ -2,7 +2,7 @@
 This is task from RSschool (https://rs.school/js/)
 ## RSS Английский для детей
 #### my realisation ()
-<img src="./assets/image.jpg" width=100% height=40%>
+<img src="./src/assets/img/image.JPG" width=100% height=40%>
 
 #### Структура приложения:
 - Главная страница
