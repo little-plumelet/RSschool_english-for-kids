@@ -1,0 +1,110 @@
+header {
+  background-color: darkslategray;
+  padding: 2rem 0;
+  min-height: 10rem;
+
+  & > div > h1 {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 6rem;
+    color: white;
+    font-weight: 400;
+  }
+}
+
+//Toggle https://html5css.ru/howto/howto_css_switch.php
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  font-family: 'Cabin Sketch';
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+  padding-left: 2rem;
+  text-align: center;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+
+  font-family: 'Cabin Sketch';
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+  text-align: left;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(58px);
+  -ms-transform: translateX(58px);
+  transform: translateX(58px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  header {
+
+    min-height: auto;
+
+    .wrapper {
+        flex-direction: column;
+        
+    }
+
+    div {
+      h1 {
+        font-size: 3rem;
+        margin-top: 4rem;
+      }
+    }
+    .switch {
+      align-self: flex-end;
+    }
+  }
+
+}

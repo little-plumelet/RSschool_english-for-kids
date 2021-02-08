@@ -1,0 +1,59 @@
+footer {
+    background-color: darkslategray;
+    min-height: 10rem;
+    padding: 2rem 0;
+
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a {
+    color: white;
+}
+
+.year {
+    padding-top: 2rem;
+}
+
+.school-reference {
+    padding-top: 1rem;
+    color: #000;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 8rem;
+    align-self: end;
+}
+
+@media screen and (min-width: 320px) and (max-width: 430px) {
+
+    footer {
+        min-height: auto;
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            text-align: center;
+        }
+
+        .year {
+            text-align: right;
+        }
+        
+    }
+}

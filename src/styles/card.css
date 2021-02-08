@@ -1,0 +1,163 @@
+div .card-category {
+  width: 28rem; }
+
+.card {
+  margin: 2rem 0;
+  min-width: 30rem;
+  min-height: 27rem;
+  text-align: center;
+  perspective: 1000px;
+  display: inline-block;
+  border: 2px solid #333333;
+  font-size: 1.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  background: #ffffff;
+  position: relative; }
+  .card .category {
+    width: 100%; }
+    .card .category img {
+      width: 100%; }
+  .card .body-img {
+    height: 75%; }
+  .card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    background-color: white; }
+  .card .front-body {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .card .front-body img {
+      visibility: visible; }
+  .card .card-footer {
+    width: 90%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 2rem; }
+  .card .back-inactive {
+    display: none; }
+  .card .front-inactive img {
+    visibility: hidden; }
+  .card .front-inactive .card-footer {
+    display: none; }
+  .card > div > p {
+    padding-top: 1rem;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 3rem; }
+  .card .card-button {
+    align-self: center;
+    background: transparent;
+    padding: 0 1rem;
+    color: #41403E;
+    font-size: 2rem;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 2px #41403E; }
+    .card .card-button > img {
+      width: 1rem; }
+  .card .card-button:hover {
+    box-shadow: 10px 8px 4px -6px rgba(0, 0, 0, 0.3);
+    cursor: pointer; }
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card::before {
+  content: '';
+  border: 2px solid #353535;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+  border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%; }
+
+.card-game {
+  display: inline-block;
+  background: #ffffff;
+  border: 3px solid  #0f4e97;
+  font-size: 1.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  position: relative; }
+
+.card-game::before {
+  content: '';
+  display: block;
+  border: 3px solid #0f4e97;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+  border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%; }
+
+.deactivated {
+  opacity: 70%;
+  pointer-events: none; }
+
+.main-wrapper {
+  flex-direction: column; }
+
+.game-button {
+  background: #3c6464;
+  margin: 2rem 0;
+  height: 4rem;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+  border: 3px solid  #0f4e97;
+  font-size: 1.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  position: relative; }
+  .game-button:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer; }
+
+.game-button:after {
+  content: '';
+  display: block;
+  border: 3px solid #0f4e97;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+  border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%; }
+
+.game-button-repeat {
+  background: white;
+  color: #333333; }
+
+.stars-box {
+  min-height: 4.5rem;
+  display: flex; }
+  .stars-box img {
+    height: 4.1rem; }
+
+/*# sourceMappingURL=card.css.map */

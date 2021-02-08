@@ -1,0 +1,80 @@
+
+li {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 2.5rem;
+    margin: 2rem 0 2rem 4rem;
+    color: white;
+    cursor: pointer;
+}
+
+// https://codepen.io/clever/pen/LNdbQm
+.hidden-menu {
+    display: block;
+    position: fixed;
+    list-style:none;
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+    width: 32rem;
+    background-color: darkslategray;;
+    height: 100%;
+    top: 0;
+    left: -32rem;
+    transition: left .3s;
+    z-index: 2;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .hidden-menu-ticker {
+    display: none;
+  }
+  
+  .btn-menu {
+    color: #fff;
+    background-color: #ccc;
+    padding: 0.7rem;
+    position: fixed;
+    
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 3.5rem;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  .btn-menu span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+  }
+  .btn-menu span.first {
+    margin-top: 0;
+  }
+  
+  .hidden-menu-ticker:checked ~ .btn-menu {
+    //left: 26rem;
+  }
+  .hidden-menu-ticker:checked ~ .hidden-menu {
+    left: 0;
+    padding-top: 8rem;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.first {
+    transform: rotate(45deg);
+    top: 8px;
+    
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.third {
+    transform: rotate(-45deg);
+    top: -8px;    
+  }
+
+  .activated {
+    text-decoration: underline;
+  }

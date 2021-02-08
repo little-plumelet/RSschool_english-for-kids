@@ -1,0 +1,226 @@
+@mixin card-frame-blue {
+    border: 3px solid  #0f4e97;
+    font-size: 1.5rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    position: relative;
+}
+
+@mixin card-frame-blue-before {
+    border: 3px solid #0f4e97;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+}
+
+
+div .card-category {
+    width: 28rem;
+}
+.card {
+    margin: 2rem 0;
+    min-width: 30rem;
+    min-height: 27rem;
+    text-align: center;
+    perspective: 1000px;
+
+    // обводка карточки https://codepen.io/andybelldesign/pen/MPLzay
+    display: inline-block;
+    border: 2px solid #333333;
+    font-size: 1.5rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+    position: relative;
+
+    & .category {
+        width: 100%;
+        
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & .body-img {
+        height: 75%;
+    }
+
+
+    .front, .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        backface-visibility: hidden;
+        background-color: rgb(255, 255, 255);
+        
+    }  
+
+    .front-body {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            visibility: visible;
+        }
+    }
+
+    .card-footer {
+        width: 90%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-family: 'Cabin Sketch', cursive;
+        font-size: 2rem;
+    }
+
+     .back-inactive {
+         display: none;
+     }
+
+     .front-inactive {
+         img {
+             visibility: hidden;
+         }
+         .card-footer {
+            display: none;
+         }
+     }
+
+    & > div > p {
+        padding-top: 1rem;
+        font-family: 'Cabin Sketch', cursive;
+        font-size: 3rem;
+    }
+
+    //стиль кнопки https://codepen.io/sdthornton/pen/wBZdXq
+    .card-button {
+            align-self: center;
+            background: transparent;
+            padding: 0 1rem;
+            color: #41403E;
+            font-size: 2rem;
+            outline: none;
+            box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border: solid 2px #41403E;
+             
+            & > img {
+                width: 1rem;
+            }
+ 
+                
+    }
+    .card-button:hover {
+        box-shadow: 10px 8px 4px -6px hsla(0,0%,0%,.3);
+        cursor: pointer;
+     }
+    
+
+
+     &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+
+}
+
+.card::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+
+.card-game {
+     // обводка карточки https://codepen.io/andybelldesign/pen/MPLzay
+     display: inline-block;
+     background: #ffffff;
+     @include card-frame-blue;
+    
+}
+
+.card-game::before {
+    content: '';
+    display: block;
+    @include card-frame-blue-before;
+    
+//     
+ }
+
+.deactivated {
+    & {
+        opacity: 70%;
+        pointer-events: none;
+        
+    }
+}
+   
+
+
+//Дизайн кнопки начать игру
+
+.main-wrapper {
+    flex-direction: column;
+}
+.game-button {
+    background: rgb(60, 100, 100);
+    margin: 2rem 0;
+    height: 4rem;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    @include card-frame-blue; 
+
+
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        cursor: pointer;
+    }
+}
+
+.game-button:after {
+    content: '';
+    display: block;
+    @include card-frame-blue-before;
+}
+
+.game-button-repeat {
+        
+    background: white;
+    color: rgb(51, 51, 51);
+}
+
+///stars
+.stars-box {
+    min-height: 4.5rem;
+    display: flex;
+
+    img {
+        height: 4.1rem;
+    }
+
+}
